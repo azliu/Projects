@@ -30,7 +30,7 @@
 %
 % Set the title, author, and date.
 %
-\title{Caesar Hotel  \\ \small{DNSC 6211: Programming for Analytics}}
+\title{Caesar Staffing Problem  \\ \small{DNSC 6211: Programming for Analytics}}
 \author{
     Akash Bose \\
 	Yatao Lu \\
@@ -49,7 +49,7 @@
 
 % Add an abstract.
 \abstract{
-Describe your project within 200 words.  One way is answer the following questions regarding your project: (a) what did you do? (b) why did you choose do that? (c) how did you go about doing your project (d) what did you find out?, and finally (e) What did you find out? The content of your abstract and the outline and contents of your report may vary according to the needs of your specific research topic.
+Our team is trying to forcast a staffing model for front desk at Caesars Hotel in Las Vegas, by exploring available data to predict the consumer traffic. We choose this project because it is an existing problem not only for this specific hotel but for any other hotels where the staff is unionized. This predicting model can be applied industry-wide. To execute this project, we aquired a set of real-life data from Caesars Hotel including 8-month daily check-ins and check-outs. We imported the data set into Python, along with utilizing R, we develop a multivariate linear regression model to forecast the amount of total check-ins per day, and translate the daily check-in forecast into the number of staff members needed at the front desk.  
 }
 
 % Add various lists on new pages.
@@ -66,7 +66,7 @@ Describe your project within 200 words.  One way is answer the following questio
 \section{Introduction}
 \label{introduction}
 
-You will almost certainly start with an introductory description of the topic that you investigated in your assignment.  Discuss any goals, motivation, or examples of the subject; the key is to provide the reader with any information that is necessary to understand why your topic was worth investigating.  This descriptive section should also allow the reader to understand the subsequent detail sections on the subject. Limit this to 250 words.
+For almost any hotel, ensuring sufficient front desk staff is crucial to the customer experience, in addition, front desk staff at hotels in United States are usually Union members, they work part-time and need their work schedule settled two weeks in advance, according to Union requirements, thus how to staff the front desk to improve customer experience is an important management and financial problem. If the front desk is under-staffed, guests will experience longer check-in time, which will impact their experience and impression at the hotel; if the front desk is overstaffed, hotels will usually suffer from higher cost. Being an industry-wide issue, we find that solving staffing problem for hotel industry can be quite practical and useful. 
 
 \section{Background}
 
@@ -97,8 +97,7 @@ Provide a diagram of the workflow for your project. The command to include a dia
 \end{figure}
 
 
-Please explain your workflow diagram in this space. Limit this to 250 words.
-
+There are three main steps we executed. To pre-analysis exploration, we choose time variables to histogram check-in distribution. We also analyze dependent variables and independent variables both together and separately to see how they correlate with each other - with boxplot, we see the distribution of all independent variables and dependent variables; with multivariate regression, we see relationship among continuous variables. Following this pre-analysis exploration, we utilize R to develop the multiple linear regression model. This leads us to the final forecast and visualization. In this part, we first dotplot to visualize coefficient strength. With the help of R-Shiny Interactive, we are able to explore continuous variables; and with the help of XLSX Forecast Models, we are able to develop time-series multivariate model.
 
 \subsection{Project structure}
 
@@ -120,9 +119,6 @@ We quite enjoyed the learning-by-doing process in order to show interactive and 
 \subsection{Challenges}
 
 We have not learned how to do Time-series forecast so we got a lot of help from Professor Kanungo. The video and resources he gave us are very useful for us in completing our project. In the programming session, we have difficulty in applying new visualization packages to give different plots. Fortunately we discussed and helped each other and successfully make our codes working. Mostly importantly, solving the front desk staffing problem relied heavily on being able to accurately forecast guest arrivals on a daily basis, and then break that down by staffing shifts. However there were many variables, outlier events and uncertainties that made forecasting difficult. Therefore, we completed both Time-series and regression forecasts and compared both of their results.
-
-
-
 
 \section{Bullets and numbered lists (FYI, delete in your report)}
 
@@ -171,8 +167,7 @@ BTW, this is a great site to generate tables in Latex and learn how to do it in 
 
 \section{Conclusion}
 
-Wrap up your paper with an executive summary of the paper itself, reiterating its subject and its major points. Limit this to 150 words.
-
+Ensuring sufficient front desk staff is crucial to hotel guests' customer experience, and how to staff the front desk to improve customer experience is an important management and financial issue, thus this project of forecasting the number of total front desk staff is practical. By exploring a 8-month daily check-in/check-outs real-life dataset of Caesars Hotel, with the utilization of Python, R and Visualization tools, we are able to produce a forecast with in-sample average of 0.25 MAPE and out-sample average of 0.34.
 
 \end{document}
 
